@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Skin Lesion Analyzer - Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --primary: #178bce;
+      --secondary: #e1f5fe;
+      --accent: #ff6f6f;
+      --gray: #f7f7f7;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: var(--gray);
+      color: #222;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 950px; margin: 38px auto;
+      background: #fff;
+      box-shadow: 0 2px 32px #dbeefa;
+      border-radius: 18px;
+      padding: 40px 56px;
+    }
+    h1 {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 2.6em;
+      letter-spacing: -3px;
+      margin-bottom: 8px;
+      display: flex; align-items: center;
+      gap: 15px;
+    }
+    h1 svg { width:38px; height:38px; vertical-align:bottom;}
+    h2 { color:var(--primary); font-size:1.35em; margin-top:28px; margin-bottom:12px;}
+    .team, .features, .diseases, .tech {
+      margin-bottom: 29px;
+      background: var(--secondary);
+      border-radius: 12px;
+      padding: 17px 23px;
+      box-shadow: 0 1px 12px #e0e8f0ab;
+      transition: box-shadow 0.3s;
+    }
+    .team:hover, .features:hover, .diseases:hover, .tech:hover {
+      box-shadow: 0 2px 22px #91d4ff7c;
+    }
+    .team ul, .diseases ul {
+      margin:9px 0;
+      padding-left:18px;
+      font-size: 1.07em;
+    }
+    .team ul li {
+      margin: 7px 0; font-weight: 600; color:var(--accent);
+    }
+    .tag {
+      display:inline-block;
+      background:var(--primary);
+      color:#fff;
+      border-radius:5px;
+      padding:6px 13px;
+      margin: 4px 7px 4px 0;
+      font-size: 0.97em;
+      font-weight: 500;
+      box-shadow: 0 1px 7px #b5e2fe47;
+      letter-spacing: 0.5px;
+      animation: fadeIn 1.3s;
+      animation-fill-mode: backwards;
+    }
+    @keyframes fadeIn { from { opacity:0; transform:scale(.89);} to { opacity:1; transform:scale(1);}}
+    .block { margin-bottom:20px; }
+    .icon {vertical-align:middle; margin-right: 6px;}
+    .diseases ul li { margin-bottom:6px;}
+    .features ul {padding-left:14px;}
+    .features ul li {margin-bottom:5px;}
+    @media (max-width:820px) {
+      .container { padding:16px; max-width: 97vw;}
+      h1 { font-size:2em;}
+    }
+    @media (max-width:520px){
+      .container { padding:8px; border-radius:12px;}
+      h1 { font-size:1.42em;}
+      h2 { font-size:1.05em;}
+      .tag { padding:4px 10px; font-size:0.88em;}
+      .team, .features, .diseases, .tech { padding:12px 10px; }
+    }
+    footer {
+      margin-top:24px; color:#555;
+      font-size:15px; text-align: center;
+    }
+    .header-anim { animation: fadeIn .9s;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="header-anim">
+      <svg fill="none" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#e1f5fe"/><ellipse cx="32" cy="35" rx="14" ry="18" fill="#178bce"/><ellipse cx="32" cy="34" rx="12" ry="15" fill="#fff"/><ellipse cx="32" cy="37" rx="9" ry="9" fill="#ff6f6f"/><circle cx="32" cy="37" r="5" fill="#fff"/></svg>
+      Skin Lesion Analyzer
+    </h1>
+    <p><strong>Sistema Inteligente para la Detección y Clasificación de Enfermedades Cutáneas</strong></p>
+    
+    <!-- NOMBRES DEL EQUIPO -->
+    <div class="team">
+      <h2><span class="icon">👥</span>Integrantes del grupo</h2>
+      <ul>
+        <li>Erick Correa</li>
+        <li>Joseph Becerra </li>
+        <li>Josue Perea</li>
+        <!-- Puedes agregar más integrantes aquí -->
+      </ul>
+    </div>
+    
+    <!-- ¿CÓMO FUNCIONA EL PROYECTO? -->
+    <div class="features block">
+      <h2><span class="icon">⚙️</span>¿Cómo funciona?</h2>
+      <ol style="margin:17px 0 11px 24px;">
+        <li>
+          <strong>1. Registro e inicio de sesión:</strong>
+          Es necesario crear una cuenta e iniciar sesión en el sistema para acceder al diagnóstico y al historial de análisis.<br>
+          <em>(Tus datos están protegidos y no se comparten.)</em>
+        </li>
+        <li>
+          <strong>2. Subir imagen:</strong>
+          Una vez autenticado, accede a la sección <b>Diagnóstico</b> y sube una foto clara de la lesión cutánea (preferiblemente enfocada y bien iluminada). Puedes arrastrar la imagen o seleccionarla desde tu dispositivo.
+        </li>
+        <li>
+          <strong>3. Validación automática:</strong>
+          El sistema verifica que la imagen sea apta; imágenes de animales, paisajes o objetos serán rechazadas para evitar análisis erróneos.
+        </li>
+        <li>
+          <strong>4. Análisis con IA:</strong>
+          Si la imagen es válida, se procesa con algoritmos avanzados de inteligencia artificial (Deep Learning/CNN) para identificar el tipo de lesión cutánea.
+        </li>
+        <li>
+          <strong>5. Resultados detallados:</strong>
+          Se muestra el diagnóstico estimado, el nivel de confianza y recomendaciones médicas (recuerda: no es diagnóstico definitivo). Puedes descargar el reporte en PDF y a su vez sera enviado a tu correo electrónico registrado.
+        </li>
+        <li>
+          <strong>6. Historial y seguimiento:</strong>
+          Accede a tu <b>historial</b> de análisis, consulta las enfermedades detectadas y recibe información adicional sobre cada patología. Solo usuarios autenticados pueden consultar su historial.
+        </li>
+      </ol>
+      <ul style="margin-left: 20px;">
+        <li>Usa siempre imágenes claras y enfocadas; evita fotos borrosas o imágenes de otras partes (no piel).</li>
+        <li>Recuerda que esta es una herramienta de apoyo y siempre debes consultar a un médico especialista.</li>
+        <li>Si tienes dudas escribe al soporte desde la sección de contacto.</li>
+      </ul>
+    </div>
+    
+    <!-- TECNOLOGÍAS USADAS -->
+    <div class="tech block">
+      <h2><span class="icon">🛠️</span>Tecnologías utilizadas</h2>
+      <span class="tag">Python 3.8+</span>
+      <span class="tag">Django</span>
+      <span class="tag">TensorFlow / Keras</span>
+      <span class="tag">OpenCV</span>
+      <span class="tag">NumPy</span>
+      <span class="tag">Pillow</span>
+      <span class="tag">Azure Blob Storage</span>
+      <span class="tag">Supabase/PostgreSQL</span>
+      <span class="tag">HTML / CSS / JS</span>
+    </div>
+    
+    <!-- TIPOS DE ENFERMEDADES DETECTADAS -->
+    <div class="diseases block">
+      <h2><span class="icon">🩺</span>Tipos de enfermedades que detecta el sistema</h2>
+      <ul>
+        <li><strong>Melanoma</strong> (cáncer de piel grave)</li>
+        <li><strong>Carcinoma basocelular</strong></li>
+        <li><strong>Queratosis actínica</strong></li>
+        <li><strong>Queratosis benigna/seborreica</strong></li>
+        <li><strong>Nevo melanocítico</strong> (lunares)</li>
+        <li><strong>Lesiones vasculares</strong></li>
+        <li><strong>Dermatofibroma</strong></li>
+      </ul>
+    </div>
+    
+    <footer>
+      Proyecto académico para pronóstico automático y apoyo en la detección temprana de enfermedades dermatológicas.<br>
+      <b>Consulta siempre un médico especialista ante cualquier sospecha.</b>
+    </footer>
+  </div>
+</body>
+</html>
